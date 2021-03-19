@@ -11,6 +11,9 @@ public class Bug{
 	private String buildVersion;
 	private SEVERITY severity;
 	
+	Bug(){
+	}
+	
 	public int getId() {
 		return id;
 	}

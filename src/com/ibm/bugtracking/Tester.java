@@ -46,11 +46,14 @@ public class Tester extends Employee{
 			projectDetails.bugDetails.setStatus(STATUS.CLOSED);
 			System.out.println("Bug resolved, closed.");
 		}
+		
+		else if(projectDetails.bugDetails.getStatus() == STATUS.CLOSED) {
+			System.out.println("Bug is closed. Cannot Reopen the Bug.");
+		}
 	}
 	
-	public void sendBugReport() {
-		String developerEmail = super.getEmailId();
-		System.out.println("The bug report has been sent to " + developerEmail);
+	public void sendBugReport(String developerEmail, String managerEmail) {
+		System.out.println("The bug report has been sent to " + developerEmail + " and " + managerEmail);
 		System.out.println("BUG REPORT - ");
 		System.out.println("Bug ID : " + projectDetails.bugDetails.getId());
 		System.out.println("Bug Name : " + projectDetails.bugDetails.getName());
