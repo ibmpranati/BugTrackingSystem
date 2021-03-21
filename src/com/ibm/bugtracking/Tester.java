@@ -11,7 +11,7 @@ public class Tester extends Employee{
 		this.setMobileNumber(mobileNumber);
 	}
 	
-	public void addNewBug() {
+	public String addNewBug() {
 		projectDetails.bugDetails.setId(103);
 		projectDetails.bugDetails.setName("Image not visible.");
 		projectDetails.bugDetails.setPriority(PRIORITY.HIGH);
@@ -21,7 +21,7 @@ public class Tester extends Employee{
 		projectDetails.bugDetails.setStatus(STATUS.NEW);
 		projectDetails.bugDetails.setBuildVersion("v2.3");
 		projectDetails.bugDetails.setSeverity(SEVERITY.MAJOR);
-		System.out.println("New Bug is added.");
+		return "New Bug is added.";
 	}
 	
 	public void setBugStatus() {

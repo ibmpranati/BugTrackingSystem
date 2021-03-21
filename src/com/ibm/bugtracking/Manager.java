@@ -10,6 +10,10 @@ public class Manager extends Employee {
 	}
 	
 	public void assignBug() {
+		Project project1 = new Project();
+		System.out.println("Priority of Bug : " + project1.checkPriority(projectDetails.bugDetails.getPriority()));
+		System.out.println("Severity of Bug: " + project1.checkSeverity(projectDetails.bugDetails.getSeverity()));
+		
 		if(projectDetails.bugDetails.getStatus() == STATUS.NEW) {
 			projectDetails.bugDetails.setStatus(STATUS.ASSIGNED);
 			projectDetails.setDeveloperId(3019);
